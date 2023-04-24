@@ -14,14 +14,24 @@ public class PlayerMove : MonoBehaviour
     // i need to know wheres my character
     private bool isFacingRight = true;
 
+    // animator reference
+    private Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
         float moveDirection = Input.GetAxis("Horizontal");
+
+
+        //animation of run 
+        animator.SetFloat("Horizontal", Mathf.Abs(moveDirection));
+        //animation of jump
+        animator.SetBool("OnGround", isGrounded);
 
         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
 
@@ -47,6 +57,8 @@ public class PlayerMove : MonoBehaviour
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
+
+
     }
     void OnCollisionEnter2D(Collision2D other)
     {

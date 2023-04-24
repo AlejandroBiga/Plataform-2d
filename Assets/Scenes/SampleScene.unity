@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: 330370783}
   - component: {fileID: 330370782}
   - component: {fileID: 330370786}
+  - component: {fileID: 330370787}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -623,6 +624,27 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 7
   groundTag: Ground
+--- !u!95 &330370787
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330370780}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d7ec48cbd4e3ba44b4cf89b239f065f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &359132605
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +669,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359132605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.35, y: 10.95, z: 0.016796583}
+  m_LocalPosition: {x: 5.35, y: 1.78, z: 0.016796583}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
