@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    //basics
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public string groundTag = "Ground";
 
-
+    //physics and conditions
     private Rigidbody2D rb;
     private bool isGrounded = false;
-    // i need to know wheres my character
     private bool isFacingRight = true;
-
-    // animator reference
+    private bool isTouchingWall = false;
     private Animator animator;
 
     void Start()
@@ -27,16 +26,17 @@ public class PlayerMove : MonoBehaviour
     {
         float moveDirection = Input.GetAxis("Horizontal");
 
-
-        //animation of run 
+        //set animations
         animator.SetFloat("Horizontal", Mathf.Abs(moveDirection));
-        //animation of jump
+        
         animator.SetBool("OnGround", isGrounded);
+        
+        animator.SetBool("TouchingWall", isTouchingWall);
 
+        // Move the player horizontally
         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
 
-        // change the side direction of my character. That works with 0 and 1 for left and right 
-
+        // Flip the player's direction if needed
         if (moveDirection > 0 && !isFacingRight)
         {
             Flip();
@@ -45,40 +45,50 @@ public class PlayerMove : MonoBehaviour
         {
             Flip();
         }
-
-       
-
-
     }
 
     void Update()
     {
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        // Check for jump input when grounded or touching a wall
+        if ((isGrounded || isTouchingWall) && Input.GetKeyDown(KeyCode.Space))
         {
+            
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
-
-
     }
+
     void OnCollisionEnter2D(Collision2D other)
     {
+        
         if (other.gameObject.CompareTag(groundTag))
         {
             isGrounded = true;
         }
+        
+        else if (other.gameObject.CompareTag("Wall"))
+        {
+            isTouchingWall = true;
+        }
     }
+
     void OnCollisionExit2D(Collision2D other)
     {
+        
         if (other.gameObject.CompareTag(groundTag))
         {
             isGrounded = false;
         }
+        
+        else if (other.gameObject.CompareTag("Wall"))
+        {
+            isTouchingWall = false;
+        }
     }
-    // the Flip function just change the side of my sprite
+
+    // Flip the player's sprite horizontally
     void Flip()
     {
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180f, 0f);
-
     }
 }
