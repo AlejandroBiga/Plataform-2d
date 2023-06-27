@@ -11,7 +11,7 @@ public class YouLose : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
     }
 }
