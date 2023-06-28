@@ -1,4 +1,4 @@
-Library: C:\Users\aleja\OneDrive\Escritorio\Plataform-2d\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+Library: D:\MisDocumentos\GitHub\Plataform-2d\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --platform=Windows
 --backend=burst-llvm-14
 --target=AVX2
@@ -8,10 +8,10 @@ Library: C:\Users\aleja\OneDrive\Escritorio\Plataform-2d\Temp\BurstOutput\Data\P
 --float-precision=Standard
 --linker-options=PdbAltPath="Plataform 2d_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\aleja\OneDrive\Escritorio\Plataform-2d\Temp\Burst
+--temp-folder=D:\MisDocumentos\GitHub\Plataform-2d\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.2.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=C:\Users\aleja\OneDrive\Escritorio\Plataform-2d\Library\Burst
---output=C:\Users\aleja\OneDrive\Escritorio\Plataform-2d\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=D:\MisDocumentos\GitHub\Plataform-2d\Library\Burst
+--output=D:\MisDocumentos\GitHub\Plataform-2d\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
@@ -54,10 +54,10 @@ Library: C:\Users\aleja\OneDrive\Escritorio\Plataform-2d\Temp\BurstOutput\Data\P
 --float-precision=Standard
 --linker-options=PdbAltPath="Plataform 2d_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\aleja\OneDrive\Escritorio\Plataform-2d\Temp\Burst
+--temp-folder=D:\MisDocumentos\GitHub\Plataform-2d\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.2.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=C:\Users\aleja\OneDrive\Escritorio\Plataform-2d\Library\Burst
---output=C:\Users\aleja\OneDrive\Escritorio\Plataform-2d\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=D:\MisDocumentos\GitHub\Plataform-2d\Library\Burst
+--output=D:\MisDocumentos\GitHub\Plataform-2d\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
