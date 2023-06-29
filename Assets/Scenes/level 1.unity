@@ -8793,7 +8793,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.237484, y: -1.1689199, z: -10}
+  m_LocalPosition: {x: 0.7550824, y: -1.16824, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10106,7 +10106,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -10865,10 +10865,10 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 72
     m_Data: {fileID: 3666724916130892037, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -9019234469899804686, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -9019234469899804686, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   - m_RefCount: 11
     m_Data: {fileID: 6516917985212256981, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   - m_RefCount: 1
@@ -11082,7 +11082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542817880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9803882, y: -1.1679997, z: -10}
+  m_LocalPosition: {x: 0.39270687, y: -1.1679997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14571,6 +14571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: end flag
       objectReference: {fileID: 0}
+    - target: {fileID: 4909892913456202704, guid: c5db7728ac401824eb77f218bea077c3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6034824663894672851, guid: c5db7728ac401824eb77f218bea077c3, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14805,6 +14809,10 @@ PrefabInstance:
     - target: {fileID: 3307495054192363418, guid: d4e15fc6733d26645b80ddf218212357, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102728988898447395, guid: d4e15fc6733d26645b80ddf218212357, type: 3}
+      propertyPath: m_SortingOrder
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
