@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e13a000c2bd6448acc6c1381e30a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: 5
 --- !u!1 &89106270
 GameObject:
   m_ObjectHideFlags: 0
@@ -8706,7 +8706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e13a000c2bd6448acc6c1381e30a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -8793,7 +8793,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7550824, y: -1.16824, z: -10}
+  m_LocalPosition: {x: 3.086898, y: -1.16871, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9050,7 +9050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e13a000c2bd6448acc6c1381e30a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: 5
 --- !u!1 &1456643333
 GameObject:
   m_ObjectHideFlags: 0
@@ -11082,7 +11082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542817880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.39270687, y: -1.1679997, z: -10}
+  m_LocalPosition: {x: 1.4933257, y: -1.1679997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11317,7 +11317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e13a000c2bd6448acc6c1381e30a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: 5
 --- !u!1 &2025420918
 GameObject:
   m_ObjectHideFlags: 0
@@ -14502,6 +14502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boss
       objectReference: {fileID: 0}
+    - target: {fileID: 4850037136352030455, guid: 8dbe0c07dfc32754db0e40a51a920a97, type: 3}
+      propertyPath: sceneToLoad
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7169318230056765248, guid: 8dbe0c07dfc32754db0e40a51a920a97, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -14632,6 +14636,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 36912868}
     m_Modifications:
+    - target: {fileID: 6325410557364207760, guid: 0990699fff02e0844a17b0fab3f9492c, type: 3}
+      propertyPath: sceneToLoad
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7486193382571693624, guid: 0990699fff02e0844a17b0fab3f9492c, type: 3}
       propertyPath: m_SortingOrder
       value: 23

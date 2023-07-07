@@ -1036,6 +1036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boss
       objectReference: {fileID: 0}
+    - target: {fileID: 4850037136352030455, guid: 8dbe0c07dfc32754db0e40a51a920a97, type: 3}
+      propertyPath: sceneToLoad
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7169318230056765248, guid: 8dbe0c07dfc32754db0e40a51a920a97, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -70188,7 +70192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e13a000c2bd6448acc6c1381e30a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: 5
 --- !u!61 &388349342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -71401,7 +71405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e13a000c2bd6448acc6c1381e30a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: 5
 --- !u!1 &1371599524
 GameObject:
   m_ObjectHideFlags: 0
