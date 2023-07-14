@@ -16,6 +16,9 @@ public class PlayerMove : MonoBehaviour
     private bool isTouchingWall = false;
     private Animator animator;
 
+    //test of particular system (?
+    [SerializeField] private ParticleSystem particles;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -54,6 +57,7 @@ public class PlayerMove : MonoBehaviour
         {
             
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            particles.Play();
         }
     }
 
@@ -90,5 +94,6 @@ public class PlayerMove : MonoBehaviour
     {
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180f, 0f);
+        particles.Play();
     }
 }
