@@ -145,4 +145,14 @@ public class PlayerMove : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
         particles.Play();
     }
+
+    public void DisableControles()
+    {
+        enabled = false;
+    }
+
+    public void EnableControles()
+    {
+        enabled = true;
+    }
 }
