@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerData 
 {
     public float[] position;
+    public string sceneName;
 
 
     public PlayerData( PlayerMove player)
@@ -14,5 +15,7 @@ public class PlayerData
         position[0] = player.transform.position.x;
         position[1] = player.transform.position.y;
         position[2] = player.transform.position.z;
+
+        sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
     }
 }

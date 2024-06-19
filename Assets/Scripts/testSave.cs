@@ -22,20 +22,5 @@ public class testSave : MonoBehaviour
         }
     }
 
-    public void LoadPlayer()
-    {
-        PlayerData data = SaveSystem.LoadPlayer();
-     
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
-            {
-                Vector3 position;
-                position.x = data.position[0];
-                position.y = data.position[1];
-                position.z = data.position[2];
-                player.transform.position = position;
-            }
-        
-        
-    }
+  
 }
