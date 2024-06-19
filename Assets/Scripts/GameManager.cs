@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
+    public GameObject continueButton;
     void Start()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        CheckForSaveData();
     }
 
 
@@ -42,6 +44,19 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("No save data to delete.");
+        }
+    }
+
+    private void CheckForSaveData()
+    {
+        string path = Application.persistentDataPath + "/player.carpincho";
+        if (File.Exists(path))
+        {
+            continueButton.SetActive(true);
+        }
+        else
+        {
+            continueButton.SetActive(false);
         }
     }
 
