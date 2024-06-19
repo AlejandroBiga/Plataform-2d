@@ -2,33 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance;
-    void Awake()
+    
+    void Start()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject); // Para que el GameManager persista entre escenas
-        }
-        else
-        {
-            Destroy(gameObject); // Si ya hay una instancia, destruye esta para mantener solo una
-            return;
-        }
-
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-
-        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
 
 
     public void Play()
     {
+        DeleteSaveData();
         SceneManager.LoadScene(1);
     }
 
@@ -42,41 +31,18 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-
-    public void LoadGame()
+    private void DeleteSaveData()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        SaveSystem.LoadSceneAndPlayer();
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        StartCoroutine(LoadPlayerAfterSceneLoad());
-    }
-
-    private IEnumerator LoadPlayerAfterSceneLoad()
-    {
-        yield return null; // Esperar un frame para asegurarse de que todo se haya cargado
-
-        PlayerData data = SaveSystem.LoadPlayer();
-        if (data != null)
+        string path = Application.persistentDataPath + "/player.carpincho";
+        if (File.Exists(path))
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
-            {
-                Debug.Log("Player object found, setting position.");
-                Vector3 position = new Vector3(data.position[0], data.position[1], data.position[2]);
-                player.transform.position = position;
-                Debug.Log("Player position set to: " + position);
-            }
-            else
-            {
-                Debug.LogError("Player object not found.");
-            }
+            File.Delete(path);
+            Debug.Log("Save data deleted.");
         }
         else
         {
-            Debug.LogError("No save data found.");
+            Debug.Log("No save data to delete.");
         }
     }
+
 }

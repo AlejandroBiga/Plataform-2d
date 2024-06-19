@@ -25,8 +25,22 @@ public class PlayerMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        LoadPlayerPosition();
     }
-
+    void LoadPlayerPosition()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+        if (data != null)
+        {
+            Vector3 position = new Vector3(data.position[0], data.position[1], data.position[2]);
+            transform.position = position;
+            Debug.Log("Player position set to: " + position);
+        }
+        else
+        {
+            Debug.LogError("No save data found.");
+        }
+    }
     void FixedUpdate()
     {
         float moveDirection = Input.GetAxis("Horizontal");
