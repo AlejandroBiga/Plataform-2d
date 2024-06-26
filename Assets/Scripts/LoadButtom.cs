@@ -7,8 +7,7 @@ public class LoadButtom : MonoBehaviour
 {
     public void LoadGame()
     {
-        SaveSystem.LoadSceneAndPlayer();
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        SaveSystem.LoadSceneAndPlayer(gameManager.cinematicsSeen);
     }
-
-
 }

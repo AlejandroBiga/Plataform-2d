@@ -7,15 +7,30 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+
     public GameObject continueButton;
+    public Dictionary<string, bool> cinematicsSeen = new Dictionary<string, bool>();
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         CheckForSaveData();
     }
-
-
 
     public void Play()
     {
@@ -59,5 +74,4 @@ public class GameManager : MonoBehaviour
             continueButton.SetActive(false);
         }
     }
-
 }

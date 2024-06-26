@@ -10,7 +10,6 @@ public class nextLVL : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            
             DeleteSaveData();
 
             // Cambia de escena
@@ -33,7 +32,6 @@ public class nextLVL : MonoBehaviour
         }
     }
 
-    //evento
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
@@ -42,8 +40,10 @@ public class nextLVL : MonoBehaviour
             PlayerMove player = playerObject.GetComponent<PlayerMove>();
             if (player != null)
             {
-                // Guarda los datos del jugador en la nueva escena
-                SaveSystem.SavePlayer(player);
+                if (GameManager.instance != null)
+                {
+                    SaveSystem.SavePlayer(player, GameManager.instance.cinematicsSeen);
+                }
             }
         }
 
